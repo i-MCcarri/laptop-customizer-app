@@ -1,5 +1,6 @@
 import React from 'react';
 import Options from './Options';
+import FEATURES from './FeaturesObject';
 
 export default function Features(props) {
     const features = Object.keys(props.features).map((feature, idx) => {
@@ -10,7 +11,7 @@ export default function Features(props) {
                 <legend className='feature__name'>
                     <h3>{feature}</h3>
                 </legend>
-                <Options features={props.features} feature={feature} selected={props.selected} updateFeature={props.updateFeature} />
+                <Options features={FEATURES} feature={feature} selected={props.selected} updateFeature={props.updateFeature} />
             </fieldset>
         );
     });

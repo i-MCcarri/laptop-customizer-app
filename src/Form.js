@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Features from './Features';
+import FEATURES from './FeaturesObject';
 
 class Form extends Component {
     static defaultProps = {
@@ -11,7 +12,7 @@ class Form extends Component {
         return(
             <form className='main__form'>
                 <h2>Customize your Laptop</h2>
-                <Features features={this.props.features} selected={this.props.selected} updateFeature={this.props.updateFeature} />
+                <Features features={FEATURES} selected={this.props.selected} updateFeature={this.props.updateFeature} />
             </form>
         );
     }
